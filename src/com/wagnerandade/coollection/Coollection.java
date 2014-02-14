@@ -3,13 +3,7 @@ package com.wagnerandade.coollection;
 import java.util.Collection;
 
 import com.wagnerandade.coollection.matcher.Matcher;
-import com.wagnerandade.coollection.matcher.custom.Contains;
-import com.wagnerandade.coollection.matcher.custom.Equals;
-import com.wagnerandade.coollection.matcher.custom.EqualsIgnoreCase;
-import com.wagnerandade.coollection.matcher.custom.GreaterThan;
-import com.wagnerandade.coollection.matcher.custom.IsNull;
-import com.wagnerandade.coollection.matcher.custom.LessThan;
-import com.wagnerandade.coollection.matcher.custom.Not;
+import com.wagnerandade.coollection.matcher.custom.*;
 import com.wagnerandade.coollection.query.Query;
 
 public class Coollection {
@@ -25,6 +19,10 @@ public class Coollection {
 	public static Matcher contains(String value) {
 		return new Contains(value);
 	}
+
+    public static Matcher startsWith(String value) {
+        return new StartsWith(value);
+    }
 	
 	public static Matcher eqIgnoreCase(String value) {
 		return new EqualsIgnoreCase(value);
