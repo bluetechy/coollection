@@ -1,9 +1,8 @@
 package com.wagnerandade.coollection.query;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
+import com.google.common.base.Function;
 import com.wagnerandade.coollection.matcher.Matcher;
 import com.wagnerandade.coollection.query.criteria.Criteria;
 import com.wagnerandade.coollection.query.criteria.CriteriaList;
@@ -86,4 +85,29 @@ public class Query<T> {
 		return list;
 	}
 
+    public List<T> unique() {
+        List<T> outputCollection = new ArrayList<T>();
+
+        for (T elem : this.all())
+            if (!outputCollection.contains(elem))
+                outputCollection.add(elem);
+
+        return outputCollection;
+    }
+
+    public List<T> unique(Function<Map.Entry<T,T>, Boolean> equalsFunction) {
+        List<T> outputCollection = new ArrayList<T>();
+
+        for (T elem : this.all()) {
+            boolean alreadyContains = false;
+            for (T elem2 : outputCollection)
+                if (equalsFunction.apply(new AbstractMap.SimpleEntry<T, T>(elem, elem2)) )
+                    alreadyContains = true;
+
+            if (!alreadyContains)
+                outputCollection.add(elem);
+        }
+
+        return outputCollection;
+    }
 }
