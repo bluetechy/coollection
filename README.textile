@@ -1,3 +1,9 @@
+h2. What's different in this fork?
+
+- project converted to IntelliJ 13
+- unique() & unique(Function<Map.Entry<T,T>, Boolean> equalsFunction)
+- startsWith comparator
+
 h1. Coollection
 
 *A cool way to manipulate collections in Java.*
