@@ -4,6 +4,10 @@ h2. What's different in this fork?
 - unique() & unique(Function<Map.Entry<T,T>, Boolean> equalsFunction)
 - startsWith comparator
 
+h2. Download
+
+- version 0.2.1-kosiara, <a href="http://github.com/kosiara/coollection/raw/master/release/coollection-0.2.1-kosiara.jar">download </a>
+
 h1. Coollection
 
 *A cool way to manipulate collections in Java.*
