@@ -8,6 +8,10 @@ h2. Download
 
 - version 0.2.1-kosiara, <a href="http://github.com/kosiara/coollection/raw/master/release/coollection-0.2.1-kosiara.jar">download </a>
 
+h2. My primary usage:
+
+I use it in Android projects to handle LINQ-like operations on collections. Works great.
+
 h1. Coollection
 
 *A cool way to manipulate collections in Java.*
