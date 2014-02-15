@@ -2,7 +2,14 @@ h2. What's different in this fork?
 
 - project converted to IntelliJ 13
 - unique() & unique(Function<Map.Entry<T,T>, Boolean> equalsFunction)
+<pre>
+from(dates).unique();
+</pre>
 - startsWith comparator
+<pre>
+from(dates).where("name", startsWith("Cat")).orderBy("age").all();
+</pre>
+
 
 h2. Download
 
