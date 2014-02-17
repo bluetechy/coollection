@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wagnerandade</groupId>
     <artifactId>coollection</artifactId>
-    <version>0.2.1-kosiara</version>
+    <version>0.2.2-kosiara</version>
     <dependencies>
         <dependency>
             <groupId>org.hamcrest</groupId>
