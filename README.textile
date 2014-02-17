@@ -5,10 +5,14 @@ h2. What's different in this fork?
 <pre>from(dates).unique();</pre>
 - startsWith comparator
 <pre>from(dates).where("name", startsWith("Cat")).orderBy("age").all();</pre>
+- ability to sort String collection without giving property/getter method name
+<pre>from(dates).orderBy(Order.ASC).all();
+from(from(dates).unique()).orderBy(Order.DESC).all();</pre>
 
 
 h2. Download
 
+- version 0.2.2-kosiara, <a href="http://github.com/kosiara/coollection/raw/master/release/coollection-0.2.2-kosiara.jar">download </a>
 - version 0.2.1-kosiara, <a href="http://github.com/kosiara/coollection/raw/master/release/coollection-0.2.1-kosiara.jar">download </a>
 
 h2. My primary usage:
