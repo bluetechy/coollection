@@ -16,6 +16,7 @@ import static com.wagnerandade.coollection.Coollection.*;
 public class CoollectionOrderTest {
 	
 	private ArrayList<Animal> animals;
+    private ArrayList<String> stringCollection;
 	
 	@Before
 	public void before() {
@@ -27,6 +28,12 @@ public class CoollectionOrderTest {
 		animals.add(new Animal("Cat", 3));
 		animals.add(new Animal(null, -200));
 		animals.add(new Animal("Unkown", null));
+
+        stringCollection = new ArrayList<String>();
+        stringCollection.add("ZZZZZ");
+        stringCollection.add("CCCCC");
+        stringCollection.add("AAAAA");
+        stringCollection.add("DDDDD");
 	}
 	
 	@Test
@@ -62,5 +69,14 @@ public class CoollectionOrderTest {
 		Animal animal = from(animals).orderBy("scientificName").first();
 		assertThat(animal.name(), is("Chicken"));
 	}
+
+
+    @Test
+    public void order_string_collection() {
+        List<String> sorted =  from(stringCollection).orderBy(Order.ASC).all();
+        assertThat(sorted.get(0), is("AAAAA"));
+        assertThat(sorted.get(1), is("CCCCC"));
+        assertThat(sorted.get(2), is("DDDDD"));
+    }
 	
 }

@@ -47,6 +47,11 @@ public class Query<T> {
 		return this;
 	}
 
+    public Query<T> orderBy(Order order) {
+        orderCriteria = new OrderCriteria<T>(order);
+        return this;
+    }
+
 	public Query<T> orderBy(String method) {
 		return orderBy(method, Order.ASC);
 	}
