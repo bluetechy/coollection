@@ -1,10 +1,12 @@
 h2. What's different in this fork?
 
+This project is maintained by: Bartosz Kosarzycki
+
 *version: 0.2.3-kosiara*
-- filter results by nested fields inside other object (infinite depth)
+- filter results by nested fields inside other objects (infinite depth)
 <pre>from(complexCollection).where("complexB.testField", eq("SomeValue")).all()</pre>
 
-*older versions: *
+*older versions:*
 - project converted to IntelliJ 13
 - unique() & unique(Function<Map.Entry<T,T>, Boolean> equalsFunction)
 <pre>from(dates).unique();</pre>
