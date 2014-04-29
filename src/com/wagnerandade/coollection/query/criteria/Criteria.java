@@ -43,6 +43,8 @@ public class Criteria<T> {
             List<String> methods = Lists.newArrayList(method.split("\\."));
             for (String methodName : methods) {
                 temporaryValue =  Phanton.from(temporaryValue).call(methodName);
+                if (temporaryValue == null)
+                    return null;
             }
 
             return temporaryValue;

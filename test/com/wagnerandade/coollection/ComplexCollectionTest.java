@@ -24,6 +24,7 @@ public class ComplexCollectionTest {
         complexCollection.add(new ComplexA(new ComplexB("Bird")));
         complexCollection.add(new ComplexA(new ComplexB("Cat")));
         complexCollection.add(new ComplexA(new ComplexB(null)));
+        complexCollection.add(new ComplexA(null));
         complexCollection.add(new ComplexA(new ComplexB("Unknown")));
     }
 
