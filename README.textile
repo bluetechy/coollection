@@ -1,5 +1,10 @@
 h2. What's different in this fork?
 
+*version: 0.2.3-kosiara*
+- filter results by nested fields inside other object (infinite depth)
+<pre>from(complexCollection).where("complexB.testField", eq("SomeValue")).all()</pre>
+
+*older versions: *
 - project converted to IntelliJ 13
 - unique() & unique(Function<Map.Entry<T,T>, Boolean> equalsFunction)
 <pre>from(dates).unique();</pre>
@@ -12,6 +17,7 @@ from(from(dates).unique()).orderBy(Order.DESC).all();</pre>
 
 h2. Download
 
+- version 0.2.3-kosiara, <a href="http://github.com/kosiara/coollection/raw/master/release/coollection-0.2.3-kosiara.jar">download </a>
 - version 0.2.2-kosiara, <a href="http://github.com/kosiara/coollection/raw/master/release/coollection-0.2.2-kosiara.jar">download </a>
 - version 0.2.1-kosiara, <a href="http://github.com/kosiara/coollection/raw/master/release/coollection-0.2.1-kosiara.jar">download </a>
 
